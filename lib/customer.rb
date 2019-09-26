@@ -11,4 +11,14 @@ class Customer
   def self.all 
     @@all 
   end 
+  
+  def new_meal 
+    Meal.new()
+  end 
+  
+  def meals 
+  end 
+  
+  def waiters
+  end 
 end
