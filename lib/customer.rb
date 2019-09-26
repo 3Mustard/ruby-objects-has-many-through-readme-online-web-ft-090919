@@ -12,7 +12,7 @@ class Customer
     @@all 
   end 
   
-  def new_meal 
+  def new_meal(waiter,total,tip=0) 
     Meal.new(waiter,self,total,tip)
   end 
   
@@ -21,6 +21,6 @@ class Customer
   end 
   
   def waiters
-    meals.select {|meal| meal.waiter} 
+    meals.map {|meal| meal.waiter} 
   end 
 end
